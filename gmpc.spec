@@ -1,6 +1,6 @@
 Summary:	GMPC is a gtk2 frontend for the mpd
 Name:		gmpc
-Version:	0.15.0
+Version:	0.15.1
 Release:	%mkrel 1
 License:	GPL
 Group:		Sound
@@ -35,7 +35,8 @@ GMPC development files.
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x \
+	--with-curl=%{_prefix} \
 
 %make 
 
@@ -48,7 +49,7 @@ GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std
 desktop-file-install --vendor="" \
   --remove-category="Application" \
   --add-category="GTK" \
-  --add-category="X-MandrivaLinux-Multimedia-Sound;AudioVideo;Audio" \
+  --add-category="AudioVideo;Audio" \
   --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 %post
