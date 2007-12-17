@@ -15,7 +15,6 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	libcurl-devel
 BuildRequires:	libmpd-devel
 Requires:	gnome-vfs2
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 GMPC is a frontend for the mpd (Music Player Daemon). 
