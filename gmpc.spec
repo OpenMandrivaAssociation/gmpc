@@ -1,11 +1,11 @@
 Summary:	GMPC is a gtk2 frontend for the mpd
 Name:		gmpc
-Version:	0.15.1
+Version:	0.15.5.0
 Release:	%mkrel 1
-License:	GPL
+License:	GPLv2+
 Group:		Sound
 URL:		http://sarine.nl/gmpc/
-Source:		http://download.sarine.nl/%{name}-%{version}/%{name}-%{version}.tar.bz2
+Source:		http://download.qballcow.nl/%{name}-%{version}/%{name}-%{version}.tar.bz2
 BuildRequires:	scrollkeeper
 BuildRequires:	gtk2-devel
 BuildRequires:	libglade2.0-devel
@@ -36,6 +36,8 @@ GMPC development files.
 %build
 %configure2_5x \
 	--with-curl=%{_prefix} \
+	--enable-artist-browser \
+	--disable-static
 
 %make 
 
@@ -45,7 +47,7 @@ GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std
 
 %find_lang %{name} --with-gnome
 
-desktop-file-install --vendor="" \
+desktop-file-install \
   --remove-category="Application" \
   --add-category="GTK" \
   --add-category="AudioVideo;Audio" \
