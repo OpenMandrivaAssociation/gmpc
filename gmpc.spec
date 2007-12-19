@@ -13,7 +13,7 @@ BuildRequires:	gnome-vfs2-devel
 BuildRequires:	perl(XML::Parser) 
 BuildRequires:	desktop-file-utils
 BuildRequires:	libcurl-devel
-BuildRequires:	libmpd-devel
+BuildRequires:	libmpd-devel >= 0.15.0
 Requires:	gnome-vfs2
 
 %description
