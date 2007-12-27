@@ -13,7 +13,7 @@ BuildRequires:	gnome-vfs2-devel
 BuildRequires:	perl(XML::Parser) 
 BuildRequires:	desktop-file-utils
 BuildRequires:	libcurl-devel
-BuildRequires:	libmpd-devel >= 0.15.0
+BuildRequires:	libmpd-devel
 Requires:	gnome-vfs2
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -47,6 +47,8 @@ rm -rf %{buildroot}
 GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std 
 
 %find_lang %{name} --with-gnome
+
+sed -i -e 's/^Icon=%{name}.png$/Icon=%{name}/g' %{buildroot}%{_datadir}/applications/*
 
 desktop-file-install \
   --remove-category="Application" \
