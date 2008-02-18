@@ -1,4 +1,4 @@
-Summary:	GMPC is a gtk2 frontend for the mpd
+Summary:	Gtk2 frontend for the mpd
 Name:		gmpc
 Version:	0.15.5.0
 Release:	%mkrel 1
