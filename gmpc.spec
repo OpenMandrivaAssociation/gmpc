@@ -5,7 +5,7 @@ Release:	%mkrel 4
 License:	GPLv2+
 Group:		Sound
 URL:		http://sarine.nl/gmpc/
-Source:		http://download.qballcow.nl/%{name}-%{version}/%{name}-%{version}.tar.bz2
+Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.bz2
 BuildRequires:	scrollkeeper
 BuildRequires:	gtk2-devel
 BuildRequires:	libglade2.0-devel
