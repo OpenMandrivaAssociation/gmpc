@@ -14,6 +14,7 @@ BuildRequires:	perl(XML::Parser)
 BuildRequires:	desktop-file-utils
 BuildRequires:	libcurl-devel
 BuildRequires:	libmpd-devel
+BuildRequires:	gob2
 Requires:	gnome-vfs2
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 
