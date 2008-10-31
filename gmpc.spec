@@ -80,7 +80,6 @@ rm -rf %{buildroot}
 %{_datadir}/applications/%{name}.desktop
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
-%{_datadir}/pixmaps/*
 %{_iconsdir}/hicolor/*/apps/*.*g
 
 %files devel
