@@ -39,6 +39,9 @@ GMPC development files.
 %configure2_5x \
 	--with-curl=%{_prefix} \
 	--enable-artist-browser \
+	%if %mdkversion > 200900
+	--enable-configdir \
+	%endif
 	--disable-static
 
 %make 
@@ -73,11 +76,12 @@ rm -rf %{buildroot}
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog NEWS README
-%{_bindir}/%{name}
+%{_bindir}/%{name}*
 %{_datadir}/applications/%{name}.desktop
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
 %{_datadir}/pixmaps/*
+%{_iconsdir}/hicolor/*/apps/*.*g
 
 %files devel
 %dir %{_includedir}/gmpc
