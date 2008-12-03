@@ -1,11 +1,11 @@
 Summary:	Gtk2 frontend for the mpd
 Name:		gmpc
-Version:	0.16.0
+Version:	0.16.1
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Sound
 URL:		http://sarine.nl/gmpc/
-Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.bz2
+Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	scrollkeeper
 BuildRequires:	gtk2-devel
 BuildRequires:	libglade2.0-devel
