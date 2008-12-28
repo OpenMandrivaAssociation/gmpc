@@ -1,6 +1,6 @@
 Summary:	Gtk2 frontend for the mpd
 Name:		gmpc
-Version:	0.16.1
+Version:	0.17.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Sound
@@ -15,6 +15,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	libcurl-devel
 BuildRequires:	libmpd-devel
 BuildRequires:	gob2
+BuildRequires:	intltool
 Requires:	gnome-vfs2
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -81,6 +82,7 @@ rm -rf %{buildroot}
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
 %{_iconsdir}/hicolor/*/apps/*.*g
+%{_mandir}/man1/%{name}*
 
 %files devel
 %dir %{_includedir}/gmpc
