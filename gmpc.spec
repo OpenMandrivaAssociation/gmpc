@@ -1,22 +1,21 @@
 Summary:	Gtk2 frontend for the mpd
 Name:		gmpc
-Version:	0.17.0
+Version:	0.18.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Sound
 URL:		http://sarine.nl/gmpc/
 Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	scrollkeeper
-BuildRequires:	gtk2-devel
+BuildRequires:	gtk2-devel >= 2.12
 BuildRequires:	libglade2.0-devel
-BuildRequires:	gnome-vfs2-devel
-BuildRequires:	perl(XML::Parser) 
 BuildRequires:	desktop-file-utils
-BuildRequires:	libcurl-devel
-BuildRequires:	libmpd-devel
+BuildRequires:	libmpd-devel >= 0.17.1
 BuildRequires:	gob2
 BuildRequires:	intltool
-Requires:	gnome-vfs2
+BuildRequires:	curl-devel
+BuildRequires:	libsexy-devel
+BuildRequires:	libsoup-2.4-devel
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -38,8 +37,7 @@ GMPC development files.
 
 %build
 %configure2_5x \
-	--with-curl=%{_prefix} \
-	--enable-artist-browser \
+	--enable-system-libsexy \
 	%if %mdkversion > 200900
 	--enable-configdir \
 	%endif
