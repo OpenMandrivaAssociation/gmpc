@@ -1,7 +1,7 @@
 Summary:	Gtk2 frontend for the mpd
 Name:		gmpc
 Version:	0.18.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Sound
 URL:		http://sarine.nl/gmpc/
