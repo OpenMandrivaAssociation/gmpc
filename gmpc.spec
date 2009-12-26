@@ -1,10 +1,10 @@
 Summary:	Gtk2 frontend for the mpd
 Name:		gmpc
-Version:	0.19.0
+Version:	0.19.1
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Sound
-URL:		http://sarine.nl/gmpc/
+URL:		http://gmpc.wikia.com/
 Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	scrollkeeper
 BuildRequires:	gtk2-devel >= 2.12
