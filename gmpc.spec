@@ -16,6 +16,7 @@ BuildRequires:	intltool
 BuildRequires:	curl-devel
 BuildRequires:	libsexy-devel
 BuildRequires:	libsoup-2.4-devel
+BuildRequires:	vala
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
