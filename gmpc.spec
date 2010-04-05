@@ -1,6 +1,6 @@
 Summary:	Gtk2 frontend for the mpd
 Name:		gmpc
-Version:	0.19.1
+Version:	0.20.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Sound
@@ -10,7 +10,7 @@ BuildRequires:	scrollkeeper
 BuildRequires:	gtk2-devel >= 2.12
 BuildRequires:	libglade2.0-devel
 BuildRequires:	desktop-file-utils
-BuildRequires:	libmpd-devel >= 0.17.1
+BuildRequires:	libmpd-devel >= 0.19.2
 BuildRequires:	gob2
 BuildRequires:	intltool
 BuildRequires:	curl-devel
@@ -38,9 +38,6 @@ GMPC development files.
 %build
 %configure2_5x \
 	--enable-system-libsexy \
-	%if %mdkversion > 200900
-	--enable-configdir \
-	%endif
 	--disable-static
 
 %make 
@@ -51,12 +48,10 @@ GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std
 
 %find_lang %{name} --with-gnome
 
-sed -i -e 's/^Icon=%{name}.png$/Icon=%{name}/g' %{buildroot}%{_datadir}/applications/*
-
 desktop-file-install \
   --remove-category="Application" \
   --add-category="GTK" \
-  --add-category="AudioVideo;Audio" \
+  --add-category="Audio" \
   --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 %if %mdkversion < 200900
@@ -83,6 +78,7 @@ rm -rf %{buildroot}
 %{_mandir}/man1/%{name}*
 
 %files devel
+%defattr(-,root,root)
 %dir %{_includedir}/gmpc
 %{_includedir}/gmpc/*.h
 %{_libdir}/pkgconfig/%{name}.pc
