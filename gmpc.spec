@@ -74,7 +74,7 @@ rm -rf %{buildroot}
 %{_datadir}/applications/%{name}.desktop
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
-%{_iconsdir}/hicolor/*/apps/*.*g
+%{_iconsdir}/*/*/*/*
 %{_mandir}/man1/%{name}*
 
 %files devel
