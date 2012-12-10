@@ -1,0 +1,21 @@
+--- src/Makefile.am.link	2012-01-05 00:10:59.758547046 +0800
++++ src/Makefile.am	2012-01-05 00:11:26.168549368 +0800
+@@ -111,6 +111,7 @@
+     $(gmpc_GOBCFILES)
+ 
+ gmpc_LDADD=\
++	   -lm \
+            libeggsmclient.la
+ 
+ 
+--- src/Makefile.in.link	2012-01-05 00:11:35.598548666 +0800
++++ src/Makefile.in	2012-01-05 00:11:46.748548631 +0800
+@@ -498,7 +498,7 @@
+ nodist_gmpc_SOURCES = \
+     $(gmpc_GOBCFILES)
+ 
+-gmpc_LDADD = libeggsmclient.la $(am__append_1)
++gmpc_LDADD = libeggsmclient.la $(am__append_1) -lm
+ BUILT_SOURCES = \
+               $(gmpc_GOBSTAMPFILES)\
+               revisiont.h
