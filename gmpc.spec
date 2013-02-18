@@ -1,7 +1,7 @@
 Summary:	Gtk2 frontend for the mpd
 Name:		gmpc
 Version:	11.8.16
-Release:	%mkrel 1
+Release:	2
 License:	GPLv2+
 Group:		Sound
 URL:		http://gmpc.wikia.com/
@@ -19,8 +19,8 @@ BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: pkgconfig(sqlite3)
 BuildRequires: pkgconfig(unique-1.0)
 BuildRequires: pkgconfig(x11)
-BuildRequires: libsm-devel
-BuildRequires: libice-devel
+BuildRequires: pkgconfig(sm)
+BuildRequires: pkgconfig(ice)
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
 BuildRequires:	gob2 vala
