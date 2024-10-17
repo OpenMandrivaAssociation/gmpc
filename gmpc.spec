@@ -4,7 +4,7 @@ Version:	11.8.16
 Release:	3
 License:	GPLv2+
 Group:		Sound
-URL:		http://gmpc.wikia.com/
+URL:		https://gmpc.wikia.com/
 Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
 Patch0:		gmpc-11.8.16-link.patch
 BuildRequires: pkgconfig(gio-2.0)
