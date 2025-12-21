@@ -7,6 +7,11 @@ Group:		Sound
 URL:		https://gmpc.wikia.com/
 Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
 Patch0:		gmpc-11.8.16-link.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig(gio-2.0)
 BuildRequires: pkgconfig(glib-2.0) >= 2.16
 BuildRequires: pkgconfig(gmodule-2.0) >= 2.4
