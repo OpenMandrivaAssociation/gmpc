@@ -1,7 +1,7 @@
 Summary:	Gtk2 frontend for the mpd
 Name:		gmpc
 Version:	11.8.16
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Sound
 URL:		https://gmpc.wikia.com/
