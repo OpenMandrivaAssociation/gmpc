@@ -49,6 +49,8 @@ GMPC development files.
 %prep
 %setup -q
 %patch 0 -p0
+# The generated tracker calls main_window_add_status_icon without its header.
+sed -i 's|#include <main.h>|#include <main.h>\n#include "GUI/status_icon.h"|' src/Tools/gmpc-database-update-tracker.c
 
 %build
 %configure2_5x \
