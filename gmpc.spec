@@ -1,3 +1,5 @@
+%global optflags %{optflags} -Wno-incompatible-pointer-types
+
 Summary:	Gtk2 frontend for the mpd
 Name:		gmpc
 Version:	11.8.16
